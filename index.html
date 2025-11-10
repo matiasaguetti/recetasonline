@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recetas Saludables — Demo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="Plataforma de recetas y menús saludables — demo para GitHub Pages." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">Recetas Saludables</h1>
+      <nav class="main-nav">
+        <a href="#explorar">Explorar</a>
+        <a href="recipe.html?slug=ensalada-citrica">Ejemplo receta</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-left">
+        <h2>Comer sano nunca fue tan fácil</h2>
+        <p>Explora recetas saludables, menús semanales y consejos prácticos — todo con una interfaz limpia y accesible.</p>
+        <div class="cta">
+          <a class="btn primary" href="#explorar">Explorar recetas</a>
+          <a class="btn ghost" href="recipe.html?slug=ensalada-citrica">Ver receta de ejemplo</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- Slideshow: cada tarjeta tiene data-index para enlazar la receta -->
+        <div class="slideshow" id="slideshow">
+          <button class="slideshow-nav prev" id="prevBtn" aria-label="Anterior">‹</button>
+          <ul class="slides" id="slides">
+            <li class="slide" data-index="0" tabindex="0">
+              <img src="assets/img/receta1.jpg" alt="Ensalada cítrica" />
+              <div class="slide-caption">
+                <h3>Ensalada cítrica con quinoa</h3>
+                <p>Rica en proteínas y fibra.</p>
+              </div>
+            </li>
+            <li class="slide" data-index="1" tabindex="0">
+              <img src="assets/img/receta2.jpg" alt="Bowl de avena" />
+              <div class="slide-caption">
+                <h3>Bowl matutino de avena</h3>
+                <p>Ideal para comenzar el día con energía.</p>
+              </div>
+            </li>
+            <li class="slide" data-index="2" tabindex="0">
+              <img src="assets/img/receta3.jpg" alt="Salmón al horno" />
+              <div class="slide-caption">
+                <h3>Salmón al horno con verduras</h3>
+                <p>Bajo en sodio y alto en omega-3.</p>
+              </div>
+            </li>
+          </ul>
+          <button class="slideshow-nav next" id="nextBtn" aria-label="Siguiente">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="explorar" class="container explorar">
+      <h2>Recetas destacadas</h2>
+      <div class="cards" id="cards">
+        <!-- Se rellenará dinámicamente desde scripts.js -->
+      </div>
+    </section>
+
+    <section id="contacto" class="container contacto">
+      <h2>Contacto</h2>
+      <p>¿Quieres colaborar o aportar recetas? <a href="mailto:contacto@demo.com">contacto@demo.com</a></p>
+    </section>
+  </main>
+
+  <!-- Modal de vista previa rápida -->
+  <div id="recipeModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+      <div class="modal-body" id="modalBody">
+        <!-- Contenido inyectado por JS -->
+      </div>
+      <div class="modal-footer">
+        <a id="fullRecipeBtn" class="btn primary" href="#">Ver receta completa</a>
+      </div>
+    </div>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Demo • Recetas Saludables — Diseño y desarrollo: tu nombre</p>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
